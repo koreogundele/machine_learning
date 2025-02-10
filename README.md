@@ -1,4 +1,9 @@
 # Machine Learning Algorithms
 ## Creator: Korede Ogundele
 
-During my machine learning class, I explored a diverse range of machine learning and deep learning algorithms, including steepest descent, conjugate gradients, simulated annealing, clustering, ANNs, ResNets, RNNs, and LSTMs. Within this repository, I showcase practical skills in developing and implementing models and applying techniques like cross-entropy loss, Bayes theorem, and regularization for optimal performance. This portfolio underscores my understanding of various machine learning approaches and the versatility to apply them to different problems.
+This repository contains two subdirectories:
+
+1. Machine Learning for Life Sciences
+
+2. General Machine learning
+This subdirectory holds some of the first machine learning code I wrote during my master's at UC Berkeley while taking an introductory machine learning course. It includes a variety of algorithms—like conjugate gradients, clustering, artificial neural networks and ResNets.
