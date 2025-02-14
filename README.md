@@ -9,4 +9,4 @@ This subdirectory contains machine learning algorithms focused on life sciences�
 My work in this repository has been guided by the textbook Deep Learning for the Life Sciences: Applying Deep Learning to Genomics, Microscopy, Drug Discovery, and More by Bharath Ramsundar. I am reading through the book and applying the discussed techniques.
 
 2. General Machine learning
-This subdirectory holds some of the first machine learning code I wrote during my master's at UC Berkeley while taking an introductory machine learning course. It includes a variety of algorithms—like conjugate gradients, clustering, artificial neural networks and ResNets.
+This subdirectory holds some of the first machine learning code I wrote while taking an introductory machine learning course. It includes a variety of algorithms—like conjugate gradients, clustering, artificial neural networks and ResNets.
