@@ -1,4 +1,4 @@
-# Machine Learning Algorithms
+# Machine Learning for Life Sciences
 ## Creator: Korede Ogundele
 
 This repository contains two subdirectories:
