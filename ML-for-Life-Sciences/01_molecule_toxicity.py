@@ -6,8 +6,17 @@ import deepchem as dc
 
 # load data and split into datasets
 tox21_tasks, tox21_datasets, transformers = dc.molnet.load_tox21()
-train_dataset, valid_dataset, test_dataset = tox21_datasets
+training_dataset, validation_dataset, test_dataset = tox21_datasets
 
 # build and train model
+model = dc.models.MultitaskClassifier(n_tasks=12, n_features=1024, layer_sizes=[1000]) # using textbook numbers right now, might mess with these a bit
+model.fit(training_dataset, nb_epoch=10)
 
-# evaluate on training and test sets
+# evaluate model
+metric = dc.metrics.Metric(dc.metrics.roc_auc_score, np.mean)
+
+training_scores = model.evaluate(training_dataset, [metric], transformers)
+test_scores = model.evaluate(test_dataset, [metric], transformers)
+
+print(f"Training dataset scores are: {training_scores}")
+print(f"Test dataset scores are: {test_scores}")

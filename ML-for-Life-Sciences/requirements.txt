@@ -1,3 +1,24 @@
-deepchem
-numpy
-torch
+I plan to turn this file into a proper requirements.txt which can be run from the terminal. At the moment I am just gathering pip/conda commands I have used.
+I got the list of requirements from https://deepchem.readthedocs.io/en/latest/get_started/requirements.html
+
+Hard requirements
+conda install joblib numpy pandas scikit-learn sympy scipy
+
+Soft requirements, whatever soft means.
+pip install biopython   
+pip install dgl==0.9.0
+pip install rdkit
+pip install dgllife
+pip install transformers
+pip install tokenizers (says requirement already satisfied)
+brew install lightgbm
+pip install matminer
+pip install mdtraj (did not work)
+pip install git+https://github.com/samoturk/mol2vec (for Mol2vec)
+conda install -c rdkit -c mordred-descriptor mordred (had to install rdkit with conda forge too. does not see it when you only have it installed with pip)
+Ignored OpenAI Gym req. I tried going to the website but Chrome said they were trying to steal my info. Not vibing with that.
+conda install -c conda-forge openmm
+conda install -c conda-forge pdbfixer
+Pillow requirement already satisfied
+pip install pubchempy
+pip install pyGPGO
