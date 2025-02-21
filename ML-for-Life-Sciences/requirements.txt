@@ -1,3 +1,4 @@
+PART ONE
 I plan to turn this file into a proper requirements.txt which can be run from the terminal. At the moment I am just gathering pip/conda commands I have used.
 I got the list of requirements from https://deepchem.readthedocs.io/en/latest/get_started/requirements.html
 
@@ -37,6 +38,8 @@ I skipped pylibxc. Installation page looks rather complicated, I will just hope 
 Skipping dqclibs for the same reason.
 Same with basis-set-exchange. I wish they would give plain and simple instructions for how to download the package. As I have said before, sometimes documentation is not your friend.
 
+
+PART TWO
 After all that, pip check gave me:
 gensim 4.3.3 has requirement numpy<2.0,>=1.18.5, but you have numpy 2.0.2.
 mordred 1.2.0 requires networkx==2.*, but you have networkx 3.2.1 which is incompatible.
@@ -47,4 +50,12 @@ pymc3 3.11.6 requires scipy<1.8.0,>=1.7.3, but you have scipy 1.13.1 which is in
 2. Removed pymc3, then was told that "pygpgo 0.5.0 requires pymc3, which is not installed." so I removed pygpgo also.
 3. Downgraded networkx. "pip install networkx==2.8.8"
 4. "grpcio 1.70.0 is not supported on this platform" so I downgraded a few times. Still did not work so I (you guessed it) REMOVED the package.
-5. Apparently tensorflow is dependent on grpcio, so I had to reinstall it.
+5. Apparently tensorflow is dependent on grpcio, so I had to reinstall it. Gonna try running the code anyway.
+
+PART THREE
+Ran:
+"import numpy as np
+import deepchem as dc"
+and got some depedency messages. So I installed:
+pip install lightning
+pip install jax
