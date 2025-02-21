@@ -22,3 +22,10 @@ conda install -c conda-forge pdbfixer
 Pillow requirement already satisfied
 pip install pubchempy
 pip install pyGPGO
+pip install pymatgen
+conda install pytorch==2.2.1 torchvision==0.17.1 torchaudio==2.2.1 -c pytorch
+pip install simdna
+**pip install deepchem** (not sure if this is a good place to do it, but wanted to do it before tensorflow)
+pip install tensorflow
+pip install --upgrade tensorflow-probability
+pip install xgboost
