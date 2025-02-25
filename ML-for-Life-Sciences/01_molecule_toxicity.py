@@ -5,7 +5,9 @@ import numpy as np
 import deepchem as dc
 
 # load data and split into datasets
-tox21_tasks, tox21_datasets, transformers = dc.molnet.load_tox21()
+# following line is original code from textbook. Gave the error: DEPRECATION WARNING: please use MorganGenerator
+# after some trial and error, I found circular (morgan) fingerprints
+#tox21_tasks, tox21_datasets, transformers = dc.molnet.load_tox21()
 training_dataset, validation_dataset, test_dataset = tox21_datasets
 
 # build and train model
