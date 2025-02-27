@@ -59,3 +59,11 @@ import deepchem as dc"
 and got some depedency messages. So I installed:
 pip install lightning
 pip install jax
+
+
+joblib==1.4.2
+numpy==1.26.1
+pandas==2.0.3
+scikit-learn==1.6.1
+sympy==1.13.3
+scipy==1.13.1
