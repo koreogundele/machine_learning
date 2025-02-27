@@ -8,6 +8,8 @@ I was able to install deepchem and all its dependencies. Once I work through cha
 
 
 Files in this subdirectory:
+- requirements.txt : file containing all the packages required for this environment
+
 - predict_molecule_toxicity.ipynb: jupyter notebook with 
 
 - 01_molecule_toxicity: script written based on chapter 3
