@@ -1,5 +1,6 @@
 ML-for-Life-Sciences/packages.txt
 ML-for-Life-Sciences/requirements.txt
+ML-for-Life-Sciences/roughwork.ipynb
 *.txt
 .DS_Store
 */.DS_Store
