@@ -1,4 +1,5 @@
 ML-for-Life-Sciences/packages.txt
+ML-for-Life-Sciences/requirements.txt
 *.txt
 .DS_Store
 */.DS_Store
