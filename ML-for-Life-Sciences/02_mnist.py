@@ -4,3 +4,32 @@ import deepchem as dc
 import tensorflow as tf
 import tensorflow.keras.layers as layers
 
+# load dataset, one hot encode labels
+(x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
+y_train = tf.one_hot(y_train, 10).numpy()
+y_test = tf.one_hot(y_test, 10).numpy()
+# construct NumpyDataset object to split training and test sets
+training_dataset = dc.data.NumpyDataset(x_train, y_train)
+testing_dataset = dc.data.NumpyDataset(x_test, y_test)
+
+features = tf.keras.Input(shape = (28, 28, 1))
+conv2d_1 = layers.Conv2D(filters = 32,
+                         kernel_size = 5,
+                         activation = tf.nn.relu)(features)
+conv2d_2 = layers.Conv2D(filters = 64,
+                         kernel_size = 5,
+                         activation = tf.nn.relu)(conv2d_1)
+flatten = layers.Flatten()(conv2d_2) # flatten input 2D -> 1D
+dense1 = layers.Dense(units = 1024,
+                      activation = tf.nn.relu)(flatten)
+dense2 = layers.Dense(units = 10,
+                      activation = None)(dense1)
+# apply softmax to dense2
+output = layers.Activation(tf.math.softmax)(dense2) # computing softmax & cross entropy in same step is more "numerically stable"
+# make tensorflow keras model, wrap in deepchem model
+tf_keras_model = tf.keras.Model(inputs = features, outputs = [output, dense2])
+dc_model = dc.models.KerasModel(
+    tf_keras_model,
+    loss = dc.models.losses.SoftmaxCrossEntropy(),
+    output_types = ['prediction', 'loss'],
+    model_dir = 'mnist')
