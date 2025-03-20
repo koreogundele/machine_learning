@@ -10,7 +10,7 @@ training_dataset, validsation_dataset, test_dataset = tox21_datasets
 
 
 # DeepChem's dc.models contains many different life science-specific models. Here we use MultitaskClassifier
-model = dc.models.MultitaskClassifier(n_tasks=12, n_features=1024, layer_sizes=[1000]) # using textbook numbers right now, might mess with these a bit
+model = dc.models.MultitaskClassifier(n_tasks=12, n_features=1024, layer_sizes=[1000])
 model.fit(training_dataset, nb_epoch=10)
 
 # evaluate performance using ROC (receiver opeating characteristic) AUC across all tasks
