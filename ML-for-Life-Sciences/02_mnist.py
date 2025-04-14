@@ -1,4 +1,5 @@
-# Using the classic MNIST dataset. I'm gonna build a CNN from scratch (throwback to chem277b). Code based on Chapter 3.
+# Using the classic MNIST dataset. I'm gonna build a CNN from scratch (throwback to chem277b).
+# Code based on Chapter 3 of Deep Learning for the Life Sciences: Applying Deep Learning to Genomics, Microscopy, Drug Discovery, and More by Bharath Ramsundar
 
 # doing this to ensure deepchem uses Keras 2 instead of Keras 3
 import os

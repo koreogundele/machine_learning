@@ -1,5 +1,5 @@
 # This short script builds and evaluates a model that predicts molecule toxicity.
-# Taken from chapter 3 of Deep Learning for the Life Sciences.
+# Based on chapter 3 of Deep Learning for the Life Sciences: Applying Deep Learning to Genomics, Microscopy, Drug Discovery, and More by Bharath Ramsundar
 
 import numpy as np
 import deepchem as dc
