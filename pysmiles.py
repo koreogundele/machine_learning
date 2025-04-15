@@ -2,7 +2,9 @@
 # Molecules are depicted as networkx graphs.
 # use environment pysmiles
 
+import networkx as nx
 from pysmiles import read_smiles
+from pysmiles import write_smiles, fill_valence
 
 # READING SMILES
 smiles = 'C1CC[13CH2]CC1C1CCCCC1'
