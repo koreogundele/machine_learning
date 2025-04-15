@@ -8,6 +8,8 @@ In this repository are machine learning algorithms specifically for life science
 Files in this subdirectory:
 - requirements.txt : file containing all the packages required for this environment
 
-- predict_molecule_toxicity.ipynb: jupyter notebook to test code before writing a .py file.
+- 01_molecule_toxicity.py: builds and evaluates model for testing molecule toxicity
 
-- 01_molecule_toxicity: script written based on chapter 3 of 
+- 02_mnist.py: builds and evaluates CNN to use on MNIST dataset.
+
+- 03_solubility.py: 
