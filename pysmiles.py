@@ -18,3 +18,17 @@ mol_with_H = read_smiles(smiles, explicit_hydrogen=True)
 print(f"Elements (including hydrogen) in the molecule are: {mol_with_H.nodes(data='element')}")
 
 # WRITING SMILES
+mol2 = nx.Graph()
+mol2.add_edges_from([(0,1), (1,2), (1,3), (3,4), (1,5), (3,6)])
+
+for idx, ele in enumerate('CCCCOCO'):
+    mol.nodes[idx]['element'] = ele
+# set charge, hydrogen count, and bond type
+mol2.nodes[4]['charge'] = -1
+mol2.nodes[4]['hcount'] = 0
+mol2.edges[3,6]['order'] = 2
+
+print(write_smiles(mol))
+
+fill_valence(mol2, respect_hcount = True)
+print(write_smiles(mol2))
