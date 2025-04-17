@@ -13,3 +13,5 @@ Files in this subdirectory:
 - 02_mnist.py: builds and evaluates CNN to use on MNIST dataset.
 
 - 03_solubility.py: 
+
+- pysmiles.py: brief script demonstrating uses of pysmiles package (reading & writing SMILES strings)
